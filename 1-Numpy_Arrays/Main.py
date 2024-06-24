@@ -2,7 +2,20 @@ import numpy as np
 import sys
 from time import time
 
-sys_args = sys.argv
+
+sys_args = sys.argv[1:]
+
+if not sys_args:
+    # Verify if has any arguments
+    print('Please insert one of these arguments:\n'
+          '\t\033[1mshow, not_show\033[m')
+    exit()
+else:
+    # Verify if the argument is correct
+    if not sys_args[0] in ('show', 'not_show'):
+        print('Wrong argument!')
+        exit()
+
 
 if __name__ == "__main__":
     ## Normal array ##
@@ -10,7 +23,7 @@ if __name__ == "__main__":
     normal_array = [ i for i in range(0, 5_000_000) ] # Create the list
 
     ## Show list if its digited show in the final
-    if sys_args[-1] == 'show':
+    if sys_args[0] == 'show':
         print(normal_array)
 
     final_time = time() - timer
@@ -21,7 +34,7 @@ if __name__ == "__main__":
     numpy_array = np.array([ i for i in range(0, 5_000_000) ]) # Create the list
 
     ## Show list if its digited show in the final
-    if sys_args[-1] == 'show':
+    if sys_args[0] == 'show':
         print(numpy_array)
 
     final_time = time() - timer
