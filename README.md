@@ -13,5 +13,5 @@ if __name__ == '__main__':
     print(f'The Numpy version is: {np.__version__}.')
 ```
 
-    The Numpy version is: 1.26.4.
-
+Please take a look in the `Main.ipynb` with jupiter nutebook to
+toake a look in the codes
