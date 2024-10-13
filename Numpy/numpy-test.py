@@ -1,3 +1,4 @@
+# Verify if the Numpy is installed
 try:
     import numpy as np
 except:
