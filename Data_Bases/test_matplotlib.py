@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 x   = [1, 2, 3, 4]
 f_x = [2, 4, 6, 8]
 
+# Matplotlib doesn't works out of jupyter...
 if __name__ == "__name__":
     plt.title("Function: f(x) = 2x")
     plt.plot(x, f_x)
